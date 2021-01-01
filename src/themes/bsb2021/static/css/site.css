@@ -1,0 +1,95 @@
+#login_panel {
+    width: 506px;
+    height: 486px;
+    background-color: gray;
+    background-image: url('/img/outlook_login_blank.png');
+    margin: auto;
+    margin-top: 100px;   
+}
+
+#loginUsername {
+    
+}
+
+#login_security{
+    position: relative;
+    top: 122px;
+    left: 58px;
+}
+input.outlook-gui {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    padding: 2px;
+    background-color: #fff3c0;
+    height: 30px;
+    border: 2px solid darkgray;
+    margin-bottom: 5px;
+}
+
+#login_credentials {
+    position: relative;
+    top:152px;
+    left: 58px;
+}
+
+.outlook-text {
+    display: table-row;
+    float:none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    vertical-align: middle;
+}
+
+.cell-left {
+    display: table-cell;
+    float: left;
+    width: 160px;
+    vertical-align: middle;
+}
+
+.cell-right {
+    display: table-cell;
+    float: right;
+}
+
+.sign_in_button {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.sign_in_button button {
+    background-color: #eb9c12 ;
+    color: white;
+    border: 0;
+    height: 28px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    padding: 6px 17px 6px 17px;
+}
+
+.login-security {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+}
+
+.login-security a {
+    color: #ff6c00;
+}
+
+.security-row {
+    margin-bottom: 10px;
+}
+
+.connected-text {
+    position: relative;
+    left: 58;
+    top: 200px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.connected-text .large {
+    font-size: 16px;
+}
+
+.connected-text .small {
+    font-size: 10px;
+}

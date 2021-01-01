@@ -1,0 +1,60 @@
+<html>
+    <head>
+        {{ partial "styles.html" }}    
+    </head>
+    <body>
+        <div id="login_panel">
+            <div id="login_security" class="login-security">
+                <span id="">Security ( <a href="">show explanation</a> )</span>
+                <div class="security-row">
+                    <div>
+                        <input type="radio" name="security" value="public"> This is a public or shared computer
+                    </div>
+                    <div>
+                        <input type="radio" name="security" value="heh"> This is a private computer (just me and the malware here)
+                    </div>
+                </div>
+                <div class="security-row">
+                    <input type="checkbox"> Use the 'safe-mode' version of the site.
+                </div>
+            </div> 
+            <div id="login_credentials">
+                <div id="loginUsername" class="outlook-text">
+                    <div class="cell-left">
+                        E-mail address:
+                    </div>
+                    <div class="cell-right">
+                        <input type="text" readonly value="CONF\BSidesBoulder2021" class="outlook-gui" />
+                    </div>
+                </div>
+                <div id="loginPassword" class="outlook-text">
+                    <div class="cell-left">
+                        Password:
+                    </div>
+                    <div class="cell-right small-margin">
+                        <input type="text" readonly value="~~2021-06-12~~" class="outlook-gui" />
+                    </div>
+                </div>
+                <div class="outlook-text">
+                    <div class="cell-left">
+
+                    </div>
+                    <div class="cell-right">
+                        <div class="sign_in_button">
+                            <button name="idSignIn" value="Sign_in">Sign in</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="connected-text">
+                <div class="large">
+                    Connected to BSidesBoulder in Boulder, CO
+                </div>
+                <div class="small">
+                    &copy; 2021 ThisCountsAsParodyRight?????. No rights reserved.
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
