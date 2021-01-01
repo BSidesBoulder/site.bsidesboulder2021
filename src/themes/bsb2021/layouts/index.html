@@ -5,7 +5,7 @@
     <body>
         <div id="login_panel">
             <div id="login_security" class="login-security">
-                <span id="">Security ( <a href="">show explanation</a> )</span>
+                <span id="">Security ( <a href="#" id="showExplanationHref">show explanation</a> )</span>
                 <div class="security-row">
                     <div>
                         <input type="radio" name="security" value="public"> This is a public or shared computer
@@ -56,5 +56,15 @@
                 </div>
             </div>
         </div>
+
+        <div id="show-explanation-dialog" title="Our Little Web Scraping Joke" class="hidden">
+            <p>“Explaining a joke is like dissecting a frog. You understand it better but the frog dies in the process.”</p>
+            <p>― E.B. White</p>
+            <p>For those of you unfamiliar with the outlook web app (OWA), this was (and sadly sometimes still is) the 
+                portal for the email within a company.  Many red teamers have gotten paid handsomly from bad credentials
+                and a webmail interface or alternatively a good phishing expidition.</p>
+            <p>Wanna get to the rest of the site? click <b>Sign In</b>!</p>
+        </div>
     </body>
+    {{ partial "scripts.html" }}
 </html>

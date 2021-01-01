@@ -93,3 +93,7 @@ input.outlook-gui {
 .connected-text .small {
     font-size: 10px;
 }
+
+.hidden {
+    display: none;
+}
