@@ -1,5 +1,5 @@
-baseURL = "http://example.org/"
+baseURL = "http://bsidesboulder.org/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "BSidesBoulder 2021"
 
 theme = "bsb2021"
