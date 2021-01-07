@@ -1,3 +1,5 @@
+/* Login Page */
+
 #login_panel {
     width: 506px;
     height: 486px;
@@ -96,4 +98,19 @@ input.outlook-gui {
 
 .hidden {
     display: none;
+}
+
+/* mailbox page */
+
+.mailbox_header {
+    background-color: #eb9c12;
+    height:  60px;
+    width: 100%;
+}
+
+.mailbox_folders {
+    background-color: #ff6c00;
+    height: max-content;
+    width: 360px;
+    flex: 0 1 auto;
 }

@@ -1,10 +1,18 @@
 <html>
     <head>
         {{ partial "styles.html" }}
-        {{ partial "scripts.html" }}
+        
     </head>
     <body>
-        Mailbox Template
-        {{.Content}}
+        <div class="mailbox_header">
+            {{ partial "mailbox_header" }}
+        </div>
+        <div class="mailbox_folders">
+            {{ partial "mailbox_folders" }}
+        </div>
+        <div class="mailbox_messages">
+            {{ partial "mailbox_messages" }}
+        </div>
+        {{ partial "scripts.html" }}
     </body>
 </html>
