@@ -101,16 +101,27 @@ input.outlook-gui {
 }
 
 /* mailbox page */
+body {
+    margin:0;
+    padding:0;
+}
 
-.mailbox_header {
+.mailbox-header {
     background-color: #eb9c12;
-    height:  60px;
+    height:  10vh;
     width: 100%;
 }
 
-.mailbox_folders {
-    background-color: #ff6c00;
-    height: max-content;
-    width: 360px;
-    flex: 0 1 auto;
+.mailbox-wrapper {
+    display: grid;
+    grid-template-columns: minmax(150px, 25%) 1fr;
+}
+
+.mailbox-folders {
+    background-color: darkgreen;
+    height: 90vh;
+}
+
+.mailbox-messages {
+
 }

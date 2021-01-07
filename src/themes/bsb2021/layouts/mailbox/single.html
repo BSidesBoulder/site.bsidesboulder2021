@@ -4,14 +4,17 @@
         
     </head>
     <body>
-        <div class="mailbox_header">
+        <div class="mailbox-header">
             {{ partial "mailbox_header" }}
         </div>
-        <div class="mailbox_folders">
-            {{ partial "mailbox_folders" }}
-        </div>
-        <div class="mailbox_messages">
-            {{ partial "mailbox_messages" }}
+
+        <div class="mailbox-wrapper">
+            <div class="mailbox-folders">
+                {{ partial "mailbox_folders" }}
+            </div>
+            <div class="mailbox-messages">
+                {{ partial "mailbox_messages" }}
+            </div>
         </div>
         {{ partial "scripts.html" }}
     </body>
