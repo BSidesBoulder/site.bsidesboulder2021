@@ -118,25 +118,26 @@ body {
 }
 
 .mailbox-folders {
-    background-color: whitesmoke;
+    background-color: white;
+    height: 95vh;
+}
+
+.mailfolders {
+    padding: 10px;
+    margin: 4px;
+    border-right: lightgray 2px solid;
+    border-top: lightgray 2px solid;
     height: 95vh;
 }
 
 .mailbox-messages {
 
-}
-
-li.mail-server {
-    list-style-image: url('/img/ExchangeIcon.png');
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    vertical-align: center;
-    font-size: 16px;
-}
-
-ul.mail-server:hover {
-    background: lightgray;
+    border-left: lightgray 2px solid;
+    border-top: lightgray 2px solid;
+    margin-top: 4px;
 }
 
 .mailbox {
     padding: 10px;
 }
+

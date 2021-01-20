@@ -6,6 +6,12 @@ function onReady() {
     // Login Page Initializers
     $('#showExplanationHref').click(showExplanationDialog);
     $('#btnSignIn').click(clickSignIn);
+    $('#mailbox-folders-tree').jstree({
+        core: {
+            themes: {dots: false}
+        }
+    });
+    $('#mailbox-folders-tree').on('changed.jstree', jstreeChanged);
 
     // Mailbox Page Initializers
     $('#btnSignOut').click(clickSignOut);
@@ -37,4 +43,8 @@ function clickSignOut() {
     console.log('Signout');
     Cookies.set('loggedin', '');
     location.href = '/';
+}
+
+function jstreeChanged(e,data) {
+    console.log(data.selected);
 }
