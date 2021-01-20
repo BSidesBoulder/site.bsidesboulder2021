@@ -108,7 +108,7 @@ body {
 
 .mailbox-header {
     background-color: #eb9c12;
-    height:  10vh;
+    height:  5vh;
     width: 100%;
 }
 
@@ -119,7 +119,7 @@ body {
 
 .mailbox-folders {
     background-color: darkgreen;
-    height: 90vh;
+    height: 95vh;
 }
 
 .mailbox-messages {
