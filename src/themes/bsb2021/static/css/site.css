@@ -107,7 +107,7 @@ body {
 }
 
 .mailbox-header {
-    background-color: #eb9c12;
+    background-color: whitesmoke;
     height:  5vh;
     width: 100%;
 }
@@ -118,10 +118,25 @@ body {
 }
 
 .mailbox-folders {
-    background-color: darkgreen;
+    background-color: whitesmoke;
     height: 95vh;
 }
 
 .mailbox-messages {
 
+}
+
+li.mail-server {
+    list-style-image: url('/img/ExchangeIcon.png');
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    vertical-align: center;
+    font-size: 16px;
+}
+
+ul.mail-server:hover {
+    background: lightgray;
+}
+
+.mailbox {
+    padding: 10px;
 }
