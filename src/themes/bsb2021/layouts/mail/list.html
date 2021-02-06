@@ -1,0 +1,11 @@
+[
+    {{ range .Pages }}
+    {
+        "id": {{.Params.msgid | jsonify }},
+        "draft": {{.Params.draft | jsonify }},
+        "subject": {{.Title | jsonify}},
+        "to": "BSidesBoulder@BSidesBoulder.org",
+        "sendDate": {{ .Params.date | jsonify}}
+    },
+    {{ end }}
+]
