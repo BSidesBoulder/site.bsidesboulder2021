@@ -8,11 +8,12 @@ print(f'Email Generator')
 
 mailmessage = {
     'id': str(uuid.uuid4()),
-    'fromfield': input('Who is the email from? '),
+    'fromfield': input('Who is the email from (email address)? '),
     'fromfieldFriendly': input('Friendly name for the from email? '),
     'shortdate': datetime.utcnow().strftime('%a %b %d'),
     'longdate': datetime.utcnow().strftime("%A %B %d, %Y %I:%M %p"),
     'date': datetime.utcnow(),
+    'categories': input('Categories? '),
     'subject': input('Subject? '),
     'message': input('Base64 encoded message? ')
 }

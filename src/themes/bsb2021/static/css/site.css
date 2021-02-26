@@ -349,3 +349,18 @@ span.small-spacer {
     font-size: 12px;
 }
 
+.appheader {
+    display: table-row;
+    width: 100vw;
+}
+.appheader .leftside {
+    display: table-cell;
+    width: 50vw;
+}
+.appheader .rightside {
+    display: table-cell;
+    width: 50vw;
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 5px;
+}
