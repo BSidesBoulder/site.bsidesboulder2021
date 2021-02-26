@@ -107,9 +107,17 @@ body {
 }
 
 .mailbox-header {
-    background-color: whitesmoke;
+    background: rgb(153,153,153);
+    background: linear-gradient(0deg,#909ebc 0%,#748aad 30%,#748aad 70%,#909ebc 100%);
     height:  5vh;
     width: 100%;
+}
+
+.sectionheader {
+    background: linear-gradient(0deg, #d6d6d6 0%, #ffffff 100%);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 10px;
 }
 
 .mailbox-wrapper {
@@ -138,6 +146,223 @@ body {
 }
 
 .mailbox {
-    padding: 10px;
+    padding: 0px;
 }
 
+.maillist {
+    width: 35%;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    float: left;
+}
+
+.mnu_file {
+    display:table-cell;
+    width: 18%;
+   
+}
+.mnu_delete {
+    display: table-cell;
+}
+.mnu_move {
+    display: table-cell;
+}
+.mnu_filter {
+    display:table-cell;
+}
+.mnu_view {
+    display:table-cell;
+}
+.mnu_refresh {
+    float: right;
+    width: 10%;
+}
+
+.searchbox {
+    padding 5px;
+}
+
+input.searchbox {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 90%;
+    margin-top:10px;
+}
+
+input.searchbox::placeholder {
+    color:dodgerblue;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.mnu {
+    width: 17%;
+    background-color: f7f7f7;
+    text-align: center;
+    padding: 2px;
+    font-size: 1em;
+    font-weight: bolder;
+    border-right: 1px solid #e7e7e7;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.mnu a:link {
+    text-decoration: none;
+    color:aqua;
+}
+
+.mnu a:visited {
+    text-decoration: none;
+    color:cornflowerblue;
+}
+
+a.jstree-anchor {
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.maillist_container {
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    height: 90vh;
+    float: left;
+    width: 100%;
+}
+
+.maillist_row {
+    font-size: 12px;
+    display: table;
+    width: 100%;
+}
+
+.maillist_row_image {
+    display: table-cell;
+    margin-top: 4px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 30px;
+}
+
+.maillist_row_subject {
+    display: table-cell;
+}
+.maillist_row:hover {
+    background-color: lightgoldenrodyellow;
+}
+
+.maillist_row_sender {
+    display: table-cell;
+    color: #999;
+}
+
+.maillist_row_date {
+    display: table-cell;
+    text-align: right;
+    color: #999;
+}
+
+hr.maildivider {
+    background: linear-gradient(to right, white, lightgray, white);
+    height: 1px;
+    border: 0;
+}
+
+.row {
+    display: table;
+    width: 95%;
+    padding-left: 4px;
+    margin-top: 4px;
+}
+
+.tr {
+    display: table-row;
+}
+
+
+/* Mail Message */
+.mailpane {
+    display: table;
+}
+
+.mailmessage {
+    width: auto;
+}
+
+.mail {
+    display: table-cell;
+    padding: 10px;
+    width: 100vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow-y: scroll;
+}
+.mailheader .subject {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+    margin-bottom: 7px;
+    margin-top: 10px;
+    font-weight: bolder;
+}
+
+hr.mailsubject {
+    background: linear-gradient(to right, white, lightgray, white);
+    height: 2px;
+    border: 0;
+}
+
+.mailheader .fromfield {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    color: cornflowerblue;
+}
+
+.mailheader .datefield {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+.bolder {
+    font-weight: bolder;
+}
+
+span.small-spacer {
+    margin-right: 10px;;
+}
+
+.menu {
+    background-color: f7f7f7;
+    border-bottom: 1px solid #e7e6e6;
+    height: 30px;
+}
+.replybtn {
+    font-family: Arial, Helvetica, sans-serif;
+    display: table-cell;
+}
+
+.replyallbtn {
+    font-family: Arial, Helvetica, sans-serif;
+    display: table-cell;
+}
+
+.forwardbtn {
+    font-family: Arial, Helvetica, sans-serif;
+    display: table-cell;
+}
+.mailmessage_header {
+    font-size: 12px; 
+}
+
+.appheader {
+    display: table-row;
+    width: 100vw;
+}
+.appheader .leftside {
+    display: table-cell;
+    width: 50vw;
+}
+.appheader .rightside {
+    display: table-cell;
+    width: 50vw;
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 5px;
+}
