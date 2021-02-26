@@ -269,7 +269,8 @@ hr.maildivider {
 
 .row {
     display: table;
-    width: 100%;
+    width: 95%;
+    padding-left: 4px;
 }
 
 .tr {
