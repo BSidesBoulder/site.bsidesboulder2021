@@ -15,6 +15,7 @@ function onReady() {
 
     // Mailbox Page Initializers
     $('#btnSignOut').click(clickSignOut);
+    $('.maillist_row').click(read_email);
     console.log('OnReady Complete...');
 }
 
@@ -47,4 +48,8 @@ function clickSignOut() {
 
 function jstreeChanged(e,data) {
     console.log(data.selected);
+}
+
+function read_email(e,data) {
+    console.log($(this).attr('id'));
 }

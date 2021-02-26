@@ -2,26 +2,61 @@
     <div class="maillist">
         <div class="maillist_header">
             <div class="menu">
-                <div class="mnu_file mnu"><a href="#">File</a></div>
-                <div class="mnu_delete mnu"><a href="#">Delete</a></a></div>
-                <div class="mnu_move mnu"><a href="#">Move</a></div>
-                <div class="mnu_filter mnu"><a href="#">Filter</a></div>
-                <div class="mnu_view mnu"><a href="#">View</a></div>
+                <div class="mnu_file mnu"><a href="#">File <i class="fas fa-chevron-down"></i></a></div>
+                <div class="mnu_delete mnu"><a href="#">Delete <i class="fas fa-chevron-down"></i></a></a></div>
+                <div class="mnu_move mnu"><a href="#">Move <i class="fas fa-chevron-down"></i></a></div>
+                <div class="mnu_filter mnu"><a href="#">Filter <i class="fas fa-chevron-down"></i></a></div>
+                <div class="mnu_view mnu"><a href="#">View <i class="fas fa-chevron-down"></i></a></div>
                 <div class="mnu_refresh"></div>
             </div>
             <div class="searchbox">
                 <input type="text" class="searchbox" placeholder="Search Entire Mailbox">
             </div>
+            <div class="maillist_container">
+                <div class="maillist_row" id="1234">
+                    <div class="rowone">
+                        <div class="maillist_row_image"><i class="fas fa-envelope"></i></div>
+                        <div class="maillist_row_subject">This is a test Message</div>    
+                    </div>
+                    <div class="rowtwo">
+                        <div class="maillist_row_sender">info@bsidesboulder.org</div>
+                        <div class="maillist_row_date">Wed 2:30PM</div>
+                    </div>
+                </div>
+                <hr class="maildivider"/>
+                <div class="maillist_row" id="1235">
+                    <div class="rowone">
+                        <div class="maillist_row_image"><i class="fas fa-envelope"></i></div>
+                        <div class="maillist_row_subject">This is a test Message</div>    
+                    </div>
+                    <div class="rowtwo">
+                        <div class="maillist_row_sender">info@bsidesboulder.org</div>
+                        <div class="maillist_row_date">Wed 2:30PM</div>
+                    </div>
+                    
+                </div>
+                <hr class="maildivider"/>
+                <div class="maillist_row" id="1236" >
+                    <div class="rowone">
+                        <div class="maillist_row_image"><i class="fas fa-envelope"></i></div>
+                        <div class="maillist_row_subject">This is a test Message</div>    
+                    </div>
+                    <div class="rowtwo">
+                        <div class="maillist_row_sender">info@bsidesboulder.org</div>
+                        <div class="maillist_row_date">Wed 2:30PM</div>
+                    </div>
+                </div>
+                
+            </div>
         </div>
-        <div class="maillist_row">
-            <div class="maillist_row_image"></div>
-            <div class="maillist_row_category"></div>
-            <div class="maillist_row_subject"></div>
-            <div class="maillist_row_sender"></div>
-        </div>
-
+        
     </div>
     <div class="mailmessage">
-
+        <div class="mailheader">
+            <div class="subject"></div>
+            <hr class="mailsubject">
+            <div class="fromfield"></div>
+            <div class="tofield"></div>
+        </div>
     </div>
 </div>

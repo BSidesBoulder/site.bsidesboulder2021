@@ -146,6 +146,7 @@ body {
     height: auto;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
+    float: left;
 }
 
 .mnu_file {
@@ -188,11 +189,11 @@ input.searchbox::placeholder {
 }
 
 .mnu {
-    width: 15%;
+    width: 17%;
     background-color: #fff;
     text-align: center;
-    padding: 5px;
-    font-size: 1.3em;
+    padding: 2px;
+    font-size: 1em;
     font-weight: bolder;
 }
 .mnu a:link {
@@ -207,4 +208,50 @@ input.searchbox::placeholder {
 
 a.jstree-anchor {
     font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.maillist_container {
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    height: 90vh;
+}
+
+.maillist_row {
+    font-size: 16px;
+    height: 40px;
+}
+
+.maillist_row_image {
+    float: left;
+    margin-top: 4px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.maillist_row_subject {
+    float: left;
+}
+.maillist_row:hover {
+    background-color: yellow;
+}
+
+.maillist_row_sender {
+    float: left;
+    color: #999;
+}
+
+.maillist_row_date {
+    float: right;
+    color: #999;
+}
+
+.mailmessage {
+    float: right;
+    width:70%;
+}
+
+hr.maildivider {
+    background: linear-gradient(to right, white, lightgray, white);
+    height: 1px;
+    border: 0;
 }
