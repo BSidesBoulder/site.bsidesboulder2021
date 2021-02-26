@@ -107,7 +107,8 @@ body {
 }
 
 .mailbox-header {
-    background-color: whitesmoke;
+    background: rgb(153,153,153);
+    background: linear-gradient(0deg,#909ebc 0%,#748aad 30%,#748aad 70%,#909ebc 100%);
     height:  5vh;
     width: 100%;
 }
@@ -203,7 +204,7 @@ input.searchbox::placeholder {
 
 .mnu a:visited {
     text-decoration: none;
-    color:aqua;
+    color:cornflowerblue;
 }
 
 a.jstree-anchor {
