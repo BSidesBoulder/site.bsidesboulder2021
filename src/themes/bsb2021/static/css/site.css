@@ -230,8 +230,9 @@ a.jstree-anchor {
 }
 
 .maillist_row {
-    font-size: 16px;
-    display: table-row;
+    font-size: 12px;
+    display: table;
+    width: 100%;
 }
 
 .maillist_row_image {
@@ -243,7 +244,7 @@ a.jstree-anchor {
 }
 
 .maillist_row_subject {
-    display: table-caption;
+    display: table-cell;
 }
 .maillist_row:hover {
     background-color: lightgoldenrodyellow;
@@ -266,14 +267,15 @@ hr.maildivider {
     border: 0;
 }
 
-.rowone {
-    display: table-row;
-
+.row {
+    display: table;
+    width: 100%;
 }
 
-.rowtwo {
+.tr {
     display: table-row;
 }
+
 
 /* Mail Message */
 .mailpane {

@@ -91,15 +91,20 @@ function load_mailbox() {
             maillist_row.setAttribute('id', data.mailbox[i].id);
             maillist_row.setAttribute('class', 'maillist_row');
             maillist_row.innerHTML = `
-                <div class="rowone">
-                    <div class="maillist_row_image"><i class="fas fa-envelope"></i></div>
-                    <div class="maillist_row_subject">${data.mailbox[i].subject}</div>    
+                <div class="row">
+                    <div class="tr">
+                        <div class="maillist_row_image"><i class="fas fa-envelope"></i></div>
+                        <div class="maillist_row_sender">${data.mailbox[i].from}</div>
+                        <div class="maillist_row_date">${data.mailbox[i].date}</div>
+                    </div>
+                </div>    
+                <div class="row">
+                    <div class="tr">
+                        
+                        <div class="maillist_row_subject">${data.mailbox[i].subject}</div> 
+                    </div   
                 </div>
-                <div class="rowtwo">
-                    <div class="maillist_row_spacer">&nbsp;</div>
-                    <div class="maillist_row_sender">${data.mailbox[i].from}</div>
-                    <div class="maillist_row_date">${data.mailbox[i].date}</div>
-                </div>`;
+                `;
             
 
             container.appendChild(maillist_row);
