@@ -141,3 +141,43 @@ body {
     padding: 10px;
 }
 
+.maillist {
+    width: 30%;
+    height: 100%;
+    background-color: #eb9c12;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.mnu_file {
+    float: left;
+    width: 18%
+}
+.mnu_delete {
+    float: left;
+    width: 18%;
+}
+.mnu_move {
+    float: left;
+    width: 18%;
+}
+.mnu_filter {
+    float: left;
+    width: 18%;
+}
+.mnu_view {
+    float: left;
+    width: 18%;
+}
+.mnu_refresh {
+    float: right;
+    width: 10%;
+}
+
+input.searchbox {
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 90%;
+    text-align: center;
+    margin-top:10px;
+}
