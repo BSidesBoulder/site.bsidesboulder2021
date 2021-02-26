@@ -64,8 +64,8 @@ function read_email(e,data) {
                 <div class="mailheader">
                     <div class="subject">${data.mailbox[i].subject}</div>
                     <hr class="mailsubject">
-                    <div class="fromfield">${data.mailbox[i].from}</div>
-                    <div class="datefield"><span class="bolder small-spacer">Sent:</span>${data.mailbox[i].date}</div>
+                    <div class="fromfield">${data.mailbox[i].fromfieldFriendly} &lt;${data.mailbox[i].fromfield}&gt;</div>
+                    <div class="datefield"><span class="bolder small-spacer">Sent:</span>${data.mailbox[i].longdate}</div>
                     <hr class="mailmessage" />
                     <div class="message">${msg}</div>
                 </div>`;
@@ -94,8 +94,8 @@ function load_mailbox() {
                 <div class="row">
                     <div class="tr">
                         <div class="maillist_row_image"><i class="fas fa-envelope"></i></div>
-                        <div class="maillist_row_sender">${data.mailbox[i].from}</div>
-                        <div class="maillist_row_date">${data.mailbox[i].date}</div>
+                        <div class="maillist_row_sender">${data.mailbox[i].fromfieldFriendly}</div>
+                        <div class="maillist_row_date">${data.mailbox[i].shortdate}</div>
                     </div>
                 </div>    
                 <div class="row">
