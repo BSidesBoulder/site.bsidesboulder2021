@@ -232,7 +232,7 @@ a.jstree-anchor {
 }
 
 .maillist_row_subject {
-    display: table-cell;
+    display: table-caption;
 }
 .maillist_row:hover {
     background-color: lightgoldenrodyellow;
@@ -249,10 +249,6 @@ a.jstree-anchor {
     color: #999;
 }
 
-.mailmessage {
-    width:auto;
-}
-
 hr.maildivider {
     background: linear-gradient(to right, white, lightgray, white);
     height: 1px;
@@ -266,4 +262,46 @@ hr.maildivider {
 
 .rowtwo {
     display: table-row;
+}
+
+/* Mail Message */
+.mailmessage {
+    width: auto;
+}
+
+.mail {
+    display: table-cell;
+    padding: 10px;
+}
+.mailheader .subject {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+    margin-bottom: 7px;
+    margin-top: 10px;
+    font-weight: bolder;
+}
+
+hr.mailsubject {
+    background: linear-gradient(to right, white, lightgray, white);
+    height: 2px;
+    border: 0;
+}
+
+.mailheader .fromfield {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    color: cornflowerblue;
+}
+
+.mailheader .datefield {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+.bolder {
+    font-weight: bolder;
+}
+
+span.small-spacer {
+    margin-right: 10px;;
 }

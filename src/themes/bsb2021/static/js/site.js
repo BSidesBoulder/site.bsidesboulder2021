@@ -59,17 +59,17 @@ function read_email(e,data) {
         for (i = 0; i< data.mailbox.length; i++){
             msg = atob(data.mailbox[i].message);
             if (email_id == data.mailbox[i].id) {
-                console.log('Found it');
+                //console.log('Found it');
                 var message = `
                 <div class="mailheader">
                     <div class="subject">${data.mailbox[i].subject}</div>
                     <hr class="mailsubject">
                     <div class="fromfield">${data.mailbox[i].from}</div>
-                    <div class="tofield">${data.mailbox[i].to}</div>
+                    <div class="datefield"><span class="bolder small-spacer">Sent:</span>${data.mailbox[i].date}</div>
+                    <hr class="mailmessage" />
                     <div class="message">${msg}</div>
                 </div>`;
-                console.log(message);
-                $('#mailmessage').html(message);
+                $('.mail').html(message);
             }
         }
     })
@@ -104,7 +104,7 @@ function load_mailbox() {
 
             container.appendChild(maillist_row);
 
-            console.log(data.mailbox[i]);
+            //console.log(data.mailbox[i]);
         }
 
         $('.maillist_row').click(read_email);
