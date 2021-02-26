@@ -12,6 +12,7 @@ mailmessage = {
     'fromfieldFriendly': input('Friendly name for the from email? '),
     'shortdate': datetime.utcnow().strftime('%a %b %d'),
     'longdate': datetime.utcnow().strftime("%A %B %d, %Y %I:%M %p"),
+    'date': datetime.utcnow(),
     'subject': input('Subject? '),
     'message': input('Base64 encoded message? ')
 }
@@ -21,7 +22,7 @@ writemessagedialog = input('Write Message?')
 
 if writemessagedialog.lower() in ["yes",'y']:
     with open(f'./data/email/{mailmessage["id"]}.json','w') as output:
-        output.write(json.dumps(mailmessage))
+        output.write(json.dumps(mailmessage, default=str))
         output.close()
 
 rebuildmailbox = input('Rebuild the mailbox?')
@@ -39,5 +40,6 @@ if rebuildmailbox.lower() in ['yes','y']:
             print(data)
             mailboxfile['mailbox'].append(json.loads(data))
 
+    mailboxfile['mailbox'].sort(key=lambda x: x['date'], reverse=True)
     with open(f'themes/bsb2021/static/data/mail.json', 'w') as mlbxfile:
-        mlbxfile.write(json.dumps(mailboxfile))
+        mlbxfile.write(json.dumps(mailboxfile,default=str))

@@ -271,6 +271,7 @@ hr.maildivider {
     display: table;
     width: 95%;
     padding-left: 4px;
+    margin-top: 4px;
 }
 
 .tr {
