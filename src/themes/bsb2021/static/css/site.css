@@ -142,7 +142,7 @@ body {
 }
 
 .maillist {
-    width: 30%;
+    width: 35%;
     height: auto;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
@@ -214,6 +214,8 @@ a.jstree-anchor {
     margin-top: 10px;
     border: 1px solid #ddd;
     height: 90vh;
+    float: left;
+    width: 100%;
 }
 
 .maillist_row {
@@ -232,7 +234,7 @@ a.jstree-anchor {
     float: left;
 }
 .maillist_row:hover {
-    background-color: yellow;
+    background-color: lightgoldenrodyellow;
 }
 
 .maillist_row_sender {
@@ -246,12 +248,20 @@ a.jstree-anchor {
 }
 
 .mailmessage {
-    float: right;
-    width:70%;
+    width:auto;
 }
 
 hr.maildivider {
     background: linear-gradient(to right, white, lightgray, white);
     height: 1px;
     border: 0;
+}
+
+.rowone {
+    display: table-row;
+
+}
+
+.rowtwo {
+    display: table-row;
 }

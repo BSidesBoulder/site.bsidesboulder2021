@@ -15,7 +15,7 @@ function onReady() {
 
     // Mailbox Page Initializers
     $('#btnSignOut').click(clickSignOut);
-    $('.maillist_row').click(read_email);
+    load_mailbox();
     console.log('OnReady Complete...');
 }
 
@@ -51,5 +51,62 @@ function jstreeChanged(e,data) {
 }
 
 function read_email(e,data) {
-    console.log($(this).attr('id'));
+    var email_id = $(this).attr('id');
+    console.log(email_id);
+
+    $.get('/data/mail.json', function(data){
+        var i;
+        for (i = 0; i< data.mailbox.length; i++){
+            msg = atob(data.mailbox[i].message);
+            if (email_id == data.mailbox[i].id) {
+                console.log('Found it');
+                var message = `
+                <div class="mailheader">
+                    <div class="subject">${data.mailbox[i].subject}</div>
+                    <hr class="mailsubject">
+                    <div class="fromfield">${data.mailbox[i].from}</div>
+                    <div class="tofield">${data.mailbox[i].to}</div>
+                    <div class="message">${msg}</div>
+                </div>`;
+                console.log(message);
+                $('#mailmessage').html(message);
+            }
+        }
+    })
+}
+
+function load_mailbox() {
+    $.get('/data/mail.json',function(data) {
+        var i;
+        var container = document.getElementById('maillist_container');
+        for (i = 0; i < data.mailbox.length;i++) {
+            if (i !== 0) {
+                var mailhr = document.createElement('hr');
+                mailhr.setAttribute('class','maildivider');
+                container.appendChild(mailhr);
+
+            }
+            // lets create the object
+            var maillist_row = document.createElement('div');
+            maillist_row.setAttribute('id', data.mailbox[i].id);
+            maillist_row.setAttribute('class', 'maillist_row');
+            maillist_row.innerHTML = `
+                <div class="rowone">
+                    <div class="maillist_row_image"><i class="fas fa-envelope"></i></div>
+                    <div class="maillist_row_subject">${data.mailbox[i].subject}</div>    
+                </div>
+                <div class="rowtwo">
+                    <div class="maillist_row_sender">${data.mailbox[i].from}</div>
+                    <div class="maillist_row_date">${data.mailbox[i].date}</div>
+                </div>`;
+            
+
+            container.appendChild(maillist_row);
+
+            console.log(data.mailbox[i]);
+        }
+
+        $('.maillist_row').click(read_email);
+
+    })
 }
