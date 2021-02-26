@@ -71,6 +71,11 @@ function read_email(e,data) {
                 $('.mail').html(message);
             }
         }
+
+        // wait for 2 seconds, then mark the email as read
+        setTimeout(function() {
+            setEmailRead(email_id);
+        }, 2000);
     })
 }
 
@@ -80,6 +85,7 @@ function load_mailbox() {
     $.get(datafield,function(data) {
         var i;
         var container = document.getElementById('maillist_container');
+        var email_icon;
         for (i = 0; i < data.mailbox.length;i++) {
             if (i !== 0) {
                 var mailhr = document.createElement('hr');
@@ -92,12 +98,20 @@ function load_mailbox() {
             if (id === void(0)) {
                 id = data.mailbox[i].id;
             }
+            var readStatus = getEmailRead(data.mailbox[i].id);
+            if (readStatus) {
+                email_icon = "fa-envelope-open-text";
+            } else {
+                email_icon = "fa-envelope";
+            }
+
+
             maillist_row.setAttribute('id', data.mailbox[i].id);
             maillist_row.setAttribute('class', 'maillist_row');
             maillist_row.innerHTML = `
                 <div class="row">
                     <div class="tr">
-                        <div class="maillist_row_image"><i class="fas fa-envelope"></i></div>
+                        <div class="maillist_row_image"><i class="fas ${email_icon}"></i></div>
                         <div class="maillist_row_sender">${data.mailbox[i].fromfieldFriendly}</div>
                         <div class="maillist_row_date">${data.mailbox[i].shortdate}</div>
                     </div>
@@ -116,4 +130,20 @@ function load_mailbox() {
         $('.maillist_row').click(read_email);
         $(`#${id}`).trigger("click");
     })
+}
+
+function setEmailRead(id) {
+    console.log(`Setting ${id} to read.`)
+    localStorage.setItem(id,'read');
+}
+
+function getEmailRead(id) {
+    var value = localStorage.getItem(id);
+    console.log(`Getting ${id} read status: ${value}`);
+    if (value ==='read') {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
