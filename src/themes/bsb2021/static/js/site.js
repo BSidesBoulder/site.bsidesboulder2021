@@ -52,9 +52,8 @@ function jstreeChanged(e,data) {
 
 function read_email(e,data) {
     var email_id = $(this).attr('id');
-    console.log(email_id);
-
-    $.get('/data/mail.json', function(data){
+    var datafield = $('#datafeed').val();
+    $.get(datafield, function(data){
         var i;
         for (i = 0; i< data.mailbox.length; i++){
             msg = atob(data.mailbox[i].message);
