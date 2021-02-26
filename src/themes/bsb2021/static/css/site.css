@@ -146,7 +146,7 @@ body {
 }
 
 .mailbox {
-    padding: 10px;
+    padding: 0px;
 }
 
 .maillist {
@@ -158,21 +158,21 @@ body {
 }
 
 .mnu_file {
-    float: left;
+    display:table-cell;
     width: 18%;
    
 }
 .mnu_delete {
-    float: left;
+    display: table-cell;
 }
 .mnu_move {
-    float: left;
+    display: table-cell;
 }
 .mnu_filter {
-    float: left;
+    display:table-cell;
 }
 .mnu_view {
-    float: left;
+    display:table-cell;
 }
 .mnu_refresh {
     float: right;
@@ -198,11 +198,14 @@ input.searchbox::placeholder {
 
 .mnu {
     width: 17%;
-    background-color: #fff;
+    background-color: f7f7f7;
     text-align: center;
     padding: 2px;
     font-size: 1em;
     font-weight: bolder;
+    border-right: 1px solid #e7e7e7;
+    padding-top: 7px;
+    padding-bottom: 7px;
 }
 .mnu a:link {
     text-decoration: none;
@@ -273,6 +276,10 @@ hr.maildivider {
 }
 
 /* Mail Message */
+.mailpane {
+    display: table;
+}
+
 .mailmessage {
     width: auto;
 }
@@ -280,6 +287,7 @@ hr.maildivider {
 .mail {
     display: table-cell;
     padding: 10px;
+    width: 100vw;
 }
 .mailheader .subject {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -313,3 +321,27 @@ hr.mailsubject {
 span.small-spacer {
     margin-right: 10px;;
 }
+
+.menu {
+    background-color: f7f7f7;
+    border-bottom: 1px solid #e7e6e6;
+    height: 30px;
+}
+.replybtn {
+    font-family: Arial, Helvetica, sans-serif;
+    display: table-cell;
+}
+
+.replyallbtn {
+    font-family: Arial, Helvetica, sans-serif;
+    display: table-cell;
+}
+
+.forwardbtn {
+    font-family: Arial, Helvetica, sans-serif;
+    display: table-cell;
+}
+.mailmessage_header {
+    font-size: 12px;
+}
+
