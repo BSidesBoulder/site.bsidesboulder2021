@@ -220,30 +220,32 @@ a.jstree-anchor {
 
 .maillist_row {
     font-size: 16px;
-    height: 40px;
+    display: table-row;
 }
 
 .maillist_row_image {
-    float: left;
+    display: table-cell;
     margin-top: 4px;
     margin-left: 20px;
     margin-right: 20px;
+    width: 30px;
 }
 
 .maillist_row_subject {
-    float: left;
+    display: table-cell;
 }
 .maillist_row:hover {
     background-color: lightgoldenrodyellow;
 }
 
 .maillist_row_sender {
-    float: left;
+    display: table-cell;
     color: #999;
 }
 
 .maillist_row_date {
-    float: right;
+    display: table-cell;
+    text-align: right;
     color: #999;
 }
 

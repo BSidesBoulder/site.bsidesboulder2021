@@ -96,6 +96,7 @@ function load_mailbox() {
                     <div class="maillist_row_subject">${data.mailbox[i].subject}</div>    
                 </div>
                 <div class="rowtwo">
+                    <div class="maillist_row_spacer">&nbsp;</div>
                     <div class="maillist_row_sender">${data.mailbox[i].from}</div>
                     <div class="maillist_row_date">${data.mailbox[i].date}</div>
                 </div>`;
