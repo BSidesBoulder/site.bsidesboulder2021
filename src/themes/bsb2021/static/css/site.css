@@ -292,6 +292,8 @@ hr.maildivider {
     display: table-cell;
     padding: 10px;
     width: 100vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow-y: scroll;
 }
 .mailheader .subject {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -346,7 +348,7 @@ span.small-spacer {
     display: table-cell;
 }
 .mailmessage_header {
-    font-size: 12px;
+    font-size: 12px; 
 }
 
 .appheader {

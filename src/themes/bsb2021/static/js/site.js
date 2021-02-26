@@ -76,7 +76,9 @@ function read_email(e,data) {
 }
 
 function load_mailbox() {
-    $.get('/data/mail.json',function(data) {
+    var datafield = $('#datafeed').val();
+    var id;
+    $.get(datafield,function(data) {
         var i;
         var container = document.getElementById('maillist_container');
         for (i = 0; i < data.mailbox.length;i++) {
@@ -88,6 +90,9 @@ function load_mailbox() {
             }
             // lets create the object
             var maillist_row = document.createElement('div');
+            if (id === void(0)) {
+                id = data.mailbox[i].id;
+            }
             maillist_row.setAttribute('id', data.mailbox[i].id);
             maillist_row.setAttribute('class', 'maillist_row');
             maillist_row.innerHTML = `
@@ -105,14 +110,11 @@ function load_mailbox() {
                     </div   
                 </div>
                 `;
-            
-
             container.appendChild(maillist_row);
-
             //console.log(data.mailbox[i]);
         }
 
         $('.maillist_row').click(read_email);
-
+        $(`#${id}`).trigger("click");
     })
 }
