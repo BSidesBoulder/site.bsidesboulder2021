@@ -4,14 +4,23 @@
 <div class="mailbox">
     <div class="maillist">
         <div class="maillist_header">
-            <div class="menu">
-                <div class="mnu_file mnu"><a href="#">File <i class="fas fa-chevron-down"></i></a></div>
-                <div class="mnu_delete mnu"><a href="#">Delete <i class="fas fa-chevron-down"></i></a></a></div>
+            <div class="menu dropdown">
+                <div class="mnu_file mnu"><a href="#" class="dropbtn" onclick="showMnuFile()">File <i class="fas fa-chevron-down"></i></a></div>
+                <div class="mnu_delete mnu"><a href="#" class="dropbtn" onclick="showMnuDelete()">Delete <i class="fas fa-chevron-down"></i></a></a></div>
                 <div class="mnu_move mnu"><a href="#">Move <i class="fas fa-chevron-down"></i></a></div>
                 <div class="mnu_filter mnu"><a href="#">Filter <i class="fas fa-chevron-down"></i></a></div>
                 <div class="mnu_view mnu"><a href="#">View <i class="fas fa-chevron-down"></i></a></div>
                 <div class="mnu_refresh"></div>
+                <div id="mnuFileDropdown" class="dropdown-content show">
+                    <a href="#" onclick="markEmailAsUnread()">Mark as Unread</a>
+                    <a href="#">File 1</a>
+                    <a href="#">File 1</a>
+                </div>
+                <div id="mnuDeleteDropdown" class="dropdown-content show">
+                    <a href="#" onclick="DeleteUi()">Delete UI</a>
+                </div>
             </div>
+            
             <div class="searchbox">
                 <input type="text" class="searchbox" placeholder="Search Entire Mailbox">
             </div>
@@ -26,9 +35,9 @@
     <div class="mailpane">
         <div class="mailmessage_header">
             <div class="menu">
-                <div class="replybtn mnu"><a href="#">Reply</a></div>
-                <div class="replyallbtn mnu"><a href="#">Reply All</a></div>
-                <div class="forwardbtn mnu"><a href="#">Forward</a></div>
+                <div class="replybtn mailmnu"><a href="#">Reply</a></div>
+                <div class="replyallbtn mailmnu"><a href="#">Reply All</a></div>
+                <div class="forwardbtn mailmnu"><a href="#">Forward</a></div>
             </div>
         </div>
         <div class="mailmessage" Id="mailmessage">
@@ -38,3 +47,4 @@
         </div>
     </div>
 </div>
+

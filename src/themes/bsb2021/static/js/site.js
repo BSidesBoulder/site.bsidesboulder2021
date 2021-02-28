@@ -53,6 +53,11 @@ function jstreeChanged(e,data) {
 function read_email(e,data) {
     var email_id = $(this).attr('id');
     var datafield = $('#datafeed').val();
+    
+    // Deselect other email messages and toggle email
+    $(".selected").removeClass('selected');
+    $(this).toggleClass('selected');
+
     $.get(datafield, function(data){
         var i;
         for (i = 0; i< data.mailbox.length; i++){
@@ -113,7 +118,7 @@ function load_mailbox() {
                 maillist_row.innerHTML = `
                     <div class="row">
                         <div class="tr">
-                            <div class="maillist_row_image"><i class="fas ${email_icon}"></i></div>
+                            <div class="maillist_row_image"><i class="fas ${email_icon}" id="email-icon-${data.mailbox[i].id}"></i></div>
                             <div class="maillist_row_sender">${data.mailbox[i].fromfieldFriendly}</div>
                             <div class="maillist_row_date">${data.mailbox[i].shortdate}</div>
                         </div>
@@ -151,3 +156,38 @@ function getEmailRead(id) {
         return false;
     }
 }
+
+function showMnuFile() {
+    console.log('show menu file.');
+    document.getElementById("mnuFileDropdown").classList.toggle("show");
+}
+
+function showMnuDelete() {
+    console.log('show menu file.');
+    document.getElementById("mnuDeleteDropdown").classList.toggle("show");
+}
+
+  // Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+
+  function DeleteUi() {
+      $("#user-interface").remove();
+  }
+
+  function markEmailAsUnread() {
+      var email_id = $('.selected').attr('id');
+      localStorage.setItem(email_id,'');
+      $(`email-icon-${id}`).setAttribute('class','fas')
+      console.log(`reseting email ${email_id}`);
+  }

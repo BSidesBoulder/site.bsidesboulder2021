@@ -243,7 +243,7 @@ a.jstree-anchor {
 }
 
 .maillist_container {
-    margin-top: 10px;
+    padding-top: 10px;
     border: 1px solid #ddd;
     height: 90vh;
     float: left;
@@ -254,6 +254,8 @@ a.jstree-anchor {
     font-size: 12px;
     display: table;
     width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .maillist_row_image {
@@ -391,3 +393,56 @@ span.small-spacer {
     padding-top: 10px;
     padding-right: 5px;
 }
+
+/* Working on menu buttons */
+x/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    float: left;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+
+  #mnuDeleteDropdown {
+      margin-left: 50px;
+  }
+
+  .selected {
+      background-color: #eff3f8;
+  }
+
+  .mailmnu {
+    width:70;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-weight: bolder;
+    border-right 1px solid #e7e7e7;
+  }
+
+  .mailmnu a:link {
+      text-decoration: none;
+  }
