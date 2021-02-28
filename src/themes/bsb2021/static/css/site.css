@@ -316,7 +316,9 @@ hr.maildivider {
     padding: 10px;
     width: 100vw;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow: scroll;
     overflow-y: scroll;
+    height: 90vh;
 }
 .mailheader .subject {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
