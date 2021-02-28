@@ -82,54 +82,58 @@ function read_email(e,data) {
 function load_mailbox() {
     var datafield = $('#datafeed').val();
     var id;
-    $.get(datafield,function(data) {
-        var i;
-        var container = document.getElementById('maillist_container');
-        var email_icon;
-        for (i = 0; i < data.mailbox.length;i++) {
-            if (i !== 0) {
-                var mailhr = document.createElement('hr');
-                mailhr.setAttribute('class','maildivider');
-                container.appendChild(mailhr);
+    if (datafield)
+    {
+        $.get(datafield,function(data) {
+            var i;
+            var container = document.getElementById('maillist_container');
+            var email_icon;
+            for (i = 0; i < data.mailbox.length;i++) {
+                if (i !== 0) {
+                    var mailhr = document.createElement('hr');
+                    mailhr.setAttribute('class','maildivider');
+                    container.appendChild(mailhr);
 
-            }
-            // lets create the object
-            var maillist_row = document.createElement('div');
-            if (id === void(0)) {
-                id = data.mailbox[i].id;
-            }
-            var readStatus = getEmailRead(data.mailbox[i].id);
-            if (readStatus) {
-                email_icon = "fa-envelope-open-text";
-            } else {
-                email_icon = "fa-envelope";
-            }
+                }
+                // lets create the object
+                var maillist_row = document.createElement('div');
+                if (id === void(0)) {
+                    id = data.mailbox[i].id;
+                }
+                var readStatus = getEmailRead(data.mailbox[i].id);
+                if (readStatus) {
+                    email_icon = "fa-envelope-open-text";
+                } else {
+                    email_icon = "fa-envelope";
+                }
 
 
-            maillist_row.setAttribute('id', data.mailbox[i].id);
-            maillist_row.setAttribute('class', 'maillist_row');
-            maillist_row.innerHTML = `
-                <div class="row">
-                    <div class="tr">
-                        <div class="maillist_row_image"><i class="fas ${email_icon}"></i></div>
-                        <div class="maillist_row_sender">${data.mailbox[i].fromfieldFriendly}</div>
-                        <div class="maillist_row_date">${data.mailbox[i].shortdate}</div>
+                maillist_row.setAttribute('id', data.mailbox[i].id);
+                maillist_row.setAttribute('class', 'maillist_row');
+                maillist_row.innerHTML = `
+                    <div class="row">
+                        <div class="tr">
+                            <div class="maillist_row_image"><i class="fas ${email_icon}"></i></div>
+                            <div class="maillist_row_sender">${data.mailbox[i].fromfieldFriendly}</div>
+                            <div class="maillist_row_date">${data.mailbox[i].shortdate}</div>
+                        </div>
+                    </div>    
+                    <div class="row">
+                        <div class="tr">
+                            
+                            <div class="maillist_row_subject">${data.mailbox[i].subject}</div> 
+                        </div   
                     </div>
-                </div>    
-                <div class="row">
-                    <div class="tr">
-                        
-                        <div class="maillist_row_subject">${data.mailbox[i].subject}</div> 
-                    </div   
-                </div>
-                `;
-            container.appendChild(maillist_row);
-            //console.log(data.mailbox[i]);
-        }
+                    `;
+                container.appendChild(maillist_row);
+                //console.log(data.mailbox[i]);
+            }
 
-        $('.maillist_row').click(read_email);
-        $(`#${id}`).trigger("click");
-    })
+            $('.maillist_row').click(read_email);
+            $(`#${id}`).trigger("click");
+        });
+    }
+
 }
 
 function setEmailRead(id) {

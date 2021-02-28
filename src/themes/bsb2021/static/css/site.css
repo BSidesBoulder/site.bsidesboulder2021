@@ -1,5 +1,26 @@
 /* Login Page */
 
+.disclaimer {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.disclaimer .question {
+    background: lightsalmon;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7em;
+    font-weight: bolder;
+    
+}
+
+.disclaimer .answer {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    padding: 14px;
+    background-color: lightsteelblue;
+}
+
 #login_panel {
     width: 506px;
     height: 486px;
