@@ -6,26 +6,28 @@ import glob
 
 print(f'Email Generator')
 
-mailmessage = {
-    'id': str(uuid.uuid4()),
-    'fromfield': input('Who is the email from (email address)? '),
-    'fromfieldFriendly': input('Friendly name for the from email? '),
-    'shortdate': datetime.utcnow().strftime('%a %b %d'),
-    'longdate': datetime.utcnow().strftime("%A %B %d, %Y %I:%M %p"),
-    'date': datetime.utcnow(),
-    'categories': input('Categories? '),
-    'subject': input('Subject? '),
-    'message': input('Base64 encoded message? '),
-    'attachment': input('Attachment File Name? ')
-}
+write_email = input ('Compose Email? ')
+if write_email.lower() in ['y','yes']:
+    mailmessage = {
+        'id': str(uuid.uuid4()),
+        'fromfield': input('Who is the email from (email address)? '),
+        'fromfieldFriendly': input('Friendly name for the from email? '),
+        'shortdate': datetime.utcnow().strftime('%a %b %d'),
+        'longdate': datetime.utcnow().strftime("%A %B %d, %Y %I:%M %p"),
+        'date': datetime.utcnow(),
+        'categories': input('Categories? '),
+        'subject': input('Subject? '),
+        'message': input('Base64 encoded message? '),
+        'attachment': input('Attachment File Name? ')
+    }
 
-print(mailmessage)
-writemessagedialog = input('Write Message? ')
+    print(mailmessage)
+    writemessagedialog = input('Write Message? ')
 
-if writemessagedialog.lower() in ["yes",'y']:
-    with open(f'./data/email/{mailmessage["id"]}.json','w') as output:
-        output.write(json.dumps(mailmessage, default=str))
-        output.close()
+    if writemessagedialog.lower() in ["yes",'y']:
+        with open(f'./data/email/{mailmessage["id"]}.json','w') as output:
+            output.write(json.dumps(mailmessage, default=str))
+            output.close()
 
 rebuildmailbox = input('Rebuild the mailbox? ')
 
