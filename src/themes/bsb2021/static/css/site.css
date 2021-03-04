@@ -232,9 +232,8 @@ a.jstree-anchor {
 .maillist_row {
     font-size: 12px;
     display: table;
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    width: 95%;
+    padding: 10px;
 }
 
 .maillist_row_image {
