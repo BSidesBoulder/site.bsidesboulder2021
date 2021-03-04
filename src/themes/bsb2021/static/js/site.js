@@ -63,7 +63,16 @@ function read_email(e,data) {
         for (i = 0; i< data.mailbox.length; i++){
             msg = atob(data.mailbox[i].message);
             if (email_id == data.mailbox[i].id) {
-                //console.log('Found it');
+                // load the attachment
+                var attachment = "";
+                if (data.mailbox[i].attachment) {
+                    console.log('Has Attachment')
+                    attachment = `<div class="attachment">
+                        <div class="file"><a href="/attachments/${data.mailbox[i].attachment}" target="_blank"><i class="far fa-file-pdf"></i> ${data.mailbox[i].attachment}</a></div>
+                    </div>
+                    `
+                }
+
                 var message = `
                 <div class="mailheader">
                     <div class="subject">${data.mailbox[i].subject}</div>
@@ -72,6 +81,7 @@ function read_email(e,data) {
                     <div class="datefield"><span class="bolder small-spacer">Sent:</span>${data.mailbox[i].longdate}</div>
                     <hr class="mailmessage" />
                     <div class="message">${msg}</div>
+                    ${attachment}
                 </div>`;
                 $('.mail').html(message);
             }
@@ -188,6 +198,6 @@ window.onclick = function(event) {
   function markEmailAsUnread() {
       var email_id = $('.selected').attr('id');
       localStorage.setItem(email_id,'');
-      $(`email-icon-${id}`).setAttribute('class','fas')
+      $(`email-icon-${id}`).setAttribute('class','fas fa-envelope');
       console.log(`reseting email ${email_id}`);
   }

@@ -15,18 +15,19 @@ mailmessage = {
     'date': datetime.utcnow(),
     'categories': input('Categories? '),
     'subject': input('Subject? '),
-    'message': input('Base64 encoded message? ')
+    'message': input('Base64 encoded message? '),
+    'attachment': input('Attachment File Name? ')
 }
 
 print(mailmessage)
-writemessagedialog = input('Write Message?')
+writemessagedialog = input('Write Message? ')
 
 if writemessagedialog.lower() in ["yes",'y']:
     with open(f'./data/email/{mailmessage["id"]}.json','w') as output:
         output.write(json.dumps(mailmessage, default=str))
         output.close()
 
-rebuildmailbox = input('Rebuild the mailbox?')
+rebuildmailbox = input('Rebuild the mailbox? ')
 
 mailboxfile = {
     'mailbox': []
