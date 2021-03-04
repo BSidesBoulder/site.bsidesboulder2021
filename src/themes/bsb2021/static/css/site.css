@@ -1,33 +1,12 @@
 /* Login Page */
 
-.disclaimer {
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
-.disclaimer .question {
-    background: lightsalmon;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.7em;
-    font-weight: bolder;
-    
-}
-
-.disclaimer .answer {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.3em;
-    padding: 14px;
-    background-color: lightsteelblue;
-}
-
 #login_panel {
     width: 506px;
-    height: 486px;
+    height: 520px;
     background-color: gray;
-    background-image: url('/img/outlook_login_blank.png');
+    background-image: url('/img/bsb_outlook.png');
     margin: auto;
-    margin-top: 100px;   
+    margin-top: 2em;   
 }
 
 #loginUsername {
@@ -36,7 +15,7 @@
 
 #login_security{
     position: relative;
-    top: 122px;
+    top: 180px;
     left: 58px;
 }
 input.outlook-gui {
@@ -51,7 +30,7 @@ input.outlook-gui {
 
 #login_credentials {
     position: relative;
-    top:152px;
+    top: 200px;
     left: 58px;
 }
 
@@ -105,7 +84,7 @@ input.outlook-gui {
 .connected-text {
     position: relative;
     left: 58;
-    top: 200px;
+    top: 230px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
