@@ -87,10 +87,13 @@ function read_email(e,data) {
             }
         }
 
-        // wait for 2 seconds, then mark the email as read
-        setTimeout(function() {
-            setEmailRead(email_id);
-        }, 2000);
+        // If the email is currently "unread", wait for two seconds before
+        // marking it "read".
+        if (!getEmailRead(email_id)) {
+            setTimeout(function() {
+                setEmailRead(email_id);
+            }, 2000);
+        }
     })
 }
 
@@ -128,7 +131,10 @@ function load_mailbox() {
                 maillist_row.innerHTML = `
                     <div class="row">
                         <div class="tr">
-                            <div class="maillist_row_image"><i class="fas ${email_icon}" id="email-icon-${data.mailbox[i].id}"></i></div>
+                            <div class="maillist_row_image">
+                                <i class="fas fa-envelope" id="email-icon-${data.mailbox[i].id}-unread"></i>
+                                <i class="fas fa-envelope-open-text" id="email-icon-${data.mailbox[i].id}-read"></i>
+                            </div>
                             <div class="maillist_row_sender">${data.mailbox[i].fromfieldFriendly}</div>
                             <div class="maillist_row_date">${data.mailbox[i].shortdate}</div>
                         </div>
@@ -141,7 +147,14 @@ function load_mailbox() {
                     </div>
                     `;
                 container.appendChild(maillist_row);
-                //console.log(data.mailbox[i]);
+
+                if (!readStatus)
+                {
+                    $(`#email-icon-${data.mailbox[i].id}-read`).hide();
+                }
+                else {
+                    $(`#email-icon-${data.mailbox[i].id}-unread`).hide();
+                }
             }
 
             $('.maillist_row').click(read_email);
@@ -152,13 +165,13 @@ function load_mailbox() {
 }
 
 function setEmailRead(id) {
-    console.log(`Setting ${id} to read.`)
+    $(`#email-icon-${id}-read`).show();
+    $(`#email-icon-${id}-unread`).hide();
     localStorage.setItem(id,'read');
 }
 
 function getEmailRead(id) {
     var value = localStorage.getItem(id);
-    console.log(`Getting ${id} read status: ${value}`);
     if (value ==='read') {
         return true;
     }
@@ -168,12 +181,10 @@ function getEmailRead(id) {
 }
 
 function showMnuFile() {
-    console.log('show menu file.');
     document.getElementById("mnuFileDropdown").classList.toggle("show");
 }
 
 function showMnuDelete() {
-    console.log('show menu file.');
     document.getElementById("mnuDeleteDropdown").classList.toggle("show");
 }
 
@@ -198,6 +209,6 @@ window.onclick = function(event) {
   function markEmailAsUnread() {
       var email_id = $('.selected').attr('id');
       localStorage.setItem(email_id,'');
-      $(`email-icon-${id}`).setAttribute('class','fas fa-envelope');
-      console.log(`reseting email ${email_id}`);
+      $(`#email-icon-${email_id}-read`).hide();
+      $(`#email-icon-${email_id}-unread`).show();
   }
