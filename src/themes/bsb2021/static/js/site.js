@@ -87,10 +87,13 @@ function read_email(e,data) {
             }
         }
 
-        // wait for 2 seconds, then mark the email as read
-        setTimeout(function() {
-            setEmailRead(email_id);
-        }, 2000);
+        // If the email is currently "unread", wait for two seconds before
+        // marking it "read".
+        if (!getEmailRead(email_id)) {
+            setTimeout(function() {
+                setEmailRead(email_id);
+            }, 2000);
+        }
     })
 }
 
