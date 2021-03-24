@@ -202,13 +202,81 @@ window.onclick = function(event) {
     }
   }
 
-  function DeleteUi() {
-      $("#user-interface").remove();
-  }
+function DeleteUi() {
+  $("#user-interface").remove();
+}
 
-  function markEmailAsUnread() {
-      var email_id = $('.selected').attr('id');
-      localStorage.setItem(email_id,'');
-      $(`#email-icon-${email_id}-read`).hide();
-      $(`#email-icon-${email_id}-unread`).show();
-  }
+function choice(items) {
+    return items[Math.floor(Math.random() * items.length)];
+}
+
+function hack_text(parent) {
+    // change the capitalization of some random letters? I guess???
+    if (parent.nodeType === Node.TEXT_NODE) {
+        s = ""
+        for (let i = 0; i < parent.textContent.length; i++) {
+            c = parent.textContent.charAt(i);
+            if (Math.random() < 0.5) {
+                s += c.toLowerCase();
+            }
+            else {
+                s += c.toUpperCase();
+            }
+        }
+        parent.textContent = s;
+    }
+    else {
+        parent.childNodes.forEach(function (node) {
+            if (parent.nodeType === Node.TEXT_NODE || !parent.classList.contains("hackertext")) {
+                hack_text(node);
+            }
+        });
+    }
+}
+
+function HackUi() {
+    // ENTERING UBER-HAX0R MODE
+    let parent = document.getElementById("user-interface");
+    for ( let i = 0; i < 15; i++ ) {
+        let img = document.createElement("img");
+        img.setAttribute("src", "/img/RUN_EXPLOSION.gif");
+        img.style.position = "fixed";
+        img.style.right = (80*Math.random()) + "%";
+        img.style.top = (80*Math.random()) + "%";
+        img.style.width = "20%";
+        img.style.height = "30%";
+        img.style.transform = "rotate(" + 180*Math.random() + "deg)";
+        img.style.zIndex = 1336;
+        parent.insertBefore(img, parent.firstChild);
+    }
+
+    let count = 0;
+    let hax0r_text = window.setInterval(function() {
+        if (count < 500) {
+            // idfk, I just came up with this shit on the fly
+            let text = choice(["hackz", "ub3r hax0r", "l33t", "hackerman", "hackerwoman", "hackerenby", "b51d3s", "b0uld3r", "owo n1ce hackz :3", "alert('xss')"]);
+            let color = choice(["orange", "green", "blue", "red", "pink", "purple"]);
+            let font = choice(["courier", "verdana", "sans-serif"]);
+
+            let el = document.createElement("p");
+            el.classList.add("hackertext");
+            el.style.color = color;
+            el.style.transform = "rotate(" + (180*Math.random()-90) + "deg)";
+            el.style.fontFamily = font;
+            el.style.right = (100 * Math.random()) + "%";
+            el.style.top = (100 * Math.random()) + "%";
+            el.textContent = text;
+            parent.insertBefore(el, parent.firstChild);
+            count += 1;
+        }
+
+        hack_text(parent);
+    }, 100);
+}
+
+function markEmailAsUnread() {
+  var email_id = $('.selected').attr('id');
+  localStorage.setItem(email_id,'');
+  $(`#email-icon-${email_id}-read`).hide();
+  $(`#email-icon-${email_id}-unread`).show();
+}
