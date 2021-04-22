@@ -1,0 +1,24 @@
+<body>
+    <div class="speaker-container">
+        <div class="speaker-header">
+            <div class="speaker-name">
+                {{fullName}}
+            </div>
+            <div class="speaker-tagline">
+                {{tagLine}}
+            </div>
+            <div class="speaker-picture">
+                <img src="{{profilePicture}}" />
+            </div>
+            <div class="speaker-bio">
+                {{bio}}
+            </div>
+            <div class="speaker-twitter">
+                {% for link in links %}
+                    {{name}} {{url}}
+
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
