@@ -14,14 +14,19 @@ speakers = json.loads(speaker_req.content.decode())
 
 session_req = requests.get(SESSION_API)
 sessions = json.loads(session_req.content.decode())
+sessionLookup = {}
+
+for session in sessions[0]['sessions']:
+    sessionLookup[int(session['id'])] = session['description']
 
 template = None
-
 with open('helperscripts/speaker.html','r') as speaker_template:
     data = ''.join(speaker_template.readlines())
     template = Template(data)
 
-for speaker in speakers:
+for speaker_pre in speakers:
+    speaker = speaker_pre
+    speaker['description'] = sessionLookup[speaker['sessions'][0]['id']]
     output = template.render(speaker)
     message = {}
     message['id'] = speaker['id']
@@ -32,6 +37,5 @@ for speaker in speakers:
     message['date'] = '2021-04-24 00:00:01.000000'
     message['subject'] = speaker['sessions'][0]['name']
     message['message'] = base64.encodestring(output.encode('utf8')).decode()
-
     with open(f'./data/speaker/{speaker["id"]}.json', 'w') as jsondata:
         jsondata.write(json.dumps(message))

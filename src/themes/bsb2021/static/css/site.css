@@ -518,20 +518,44 @@ a.youtube:active {
 
 .speaker-name {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 40px;
+    font-size: 24px;
 }
 
 .speaker-tagline {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 24px;
+    font-size: 18px;
     color: #748aad;
     margin-bottom: 10px;
 }
 
 .speaker-picture {
     text-align: center;
+    height: 200px;
 }
 
 .speaker-bio {
     float: right;
+}
+
+.speaker-container {
+    width: 50%;
+    float: right;
+}
+
+.session-container {
+    width: 49%;
+    float: left;
+    border-right: 1px solid #748aad;
+    height: 100%;
+}
+
+.session-name {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 36px;
+    color: #748aad;
+    margin-bottom: 10px;
+}
+
+.speaker-bio {
+    font-size: 12px;
 }

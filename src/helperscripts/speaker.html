@@ -8,7 +8,7 @@
                 {{tagLine}}
             </div>
             <div class="speaker-picture">
-                <img src="{{profilePicture}}" />
+                <img height="200px" src="{{profilePicture}}" />
             </div>
             <div class="speaker-bio">
                 {{bio}}
@@ -16,9 +16,16 @@
             <div class="speaker-twitter">
                 {% for link in links %}
                     {{name}} {{url}}
-
                 {% endfor %}
             </div>
+        </div>
+    </div>
+    <div class="session-container">
+        <div class="session-name">
+            {{sessions[0]['name']}}
+        </div>
+        <div class="session-description">
+            {{description}}
         </div>
     </div>
 </body>
