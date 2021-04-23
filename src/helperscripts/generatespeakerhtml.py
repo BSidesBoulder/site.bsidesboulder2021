@@ -27,6 +27,12 @@ with open('helperscripts/speaker.html','r') as speaker_template:
 for speaker_pre in speakers:
     speaker = speaker_pre
     speaker['description'] = sessionLookup[speaker['sessions'][0]['id']]
+
+    #srsly hate hacks like this
+    print(speaker['fullName'])
+    if speaker['fullName'] == "kurt baumgartner":
+        speaker['fullName'] = "Kurt Baumgartner"
+
     output = template.render(speaker)
     message = {}
     message['id'] = speaker['id']
