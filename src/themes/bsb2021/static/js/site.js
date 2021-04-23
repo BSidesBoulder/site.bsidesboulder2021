@@ -48,6 +48,17 @@ function clickSignOut() {
 
 function jstreeChanged(e,data) {
     console.log(data.selected);
+
+    if (data.selected[0] === "mailbox-inbox") {
+        $('#datafeed').val('/data/mail.json');
+    } else if (data.selected[0] === "mailbox-speakers") {
+        $('#datafeed').val('/data/speaker.json');
+    } else if (data.selected[0] === "mailbox-sponsors") {
+        $('#datafeed').val('/data/sponsor.json');
+    } else if (data.selected[0] === "j1_1") {
+        $('#datafeed').val('/data/mail.json'); // default root element
+    }
+    load_mailbox();
 }
 
 function read_email(e,data) {
@@ -105,6 +116,7 @@ function load_mailbox() {
         $.get(datafield,function(data) {
             var i;
             var container = document.getElementById('maillist_container');
+            container.innerHTML = null;
             var email_icon;
             for (i = 0; i < data.mailbox.length;i++) {
                 if (i !== 0) {
