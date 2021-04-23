@@ -28,10 +28,10 @@ for speaker_pre in speakers:
     speaker = speaker_pre
     speaker['description'] = sessionLookup[speaker['sessions'][0]['id']]
 
-    #srsly hate hacks like this
+    # Capitalize name if necessary
+    name_components = speaker['fullName'].split(" ")
+    speaker['fullName'] = " ".join(c.title() for c in name_components)
     print(speaker['fullName'])
-    if speaker['fullName'] == "kurt baumgartner":
-        speaker['fullName'] = "Kurt Baumgartner"
 
     output = template.render(speaker)
     message = {}
@@ -42,6 +42,6 @@ for speaker_pre in speakers:
     message['longdate'] = 'Friday April 24, 2021 12:00:01 AM'
     message['date'] = '2021-04-24 00:00:01.000000'
     message['subject'] = speaker['sessions'][0]['name']
-    message['message'] = base64.encodestring(output.encode('utf8')).decode()
+    message['message'] = base64.b64encode(output.encode('utf8')).decode()
     with open(f'./data/speaker/{speaker["id"]}.json', 'w') as jsondata:
         jsondata.write(json.dumps(message))
