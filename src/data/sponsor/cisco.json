@@ -4,5 +4,6 @@
     "twitter": "@cisco",
     "web": "https://www.cisco.com/",
     "image": "cisco.png",
-    "completed": false
+    "completed": false,
+    "completed_date": ""
 }

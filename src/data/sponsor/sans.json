@@ -4,5 +4,6 @@
     "twitter": "@sansInstitute",
     "web": "https://www.sans.org/",
     "image": "sans.png",
-    "completed": false
+    "completed": false,
+    "completed_date": ""
 }

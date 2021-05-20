@@ -4,5 +4,6 @@
     "twitter": "@kaspersky",
     "web": "https://www.kaspersky.com/",
     "image": "kaspersky.png",
-    "completed": true
+    "completed": true,
+    "completed_date": ""
 }
