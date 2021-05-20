@@ -1,9 +1,10 @@
 {
+    "id": "1531b7d9-5a8f-4633-bf4f-c204e66a5579",
     "name": "Kaspersky",
     "level": "Contributing",
     "twitter": "@kaspersky",
     "web": "https://www.kaspersky.com/",
     "image": "kaspersky.png",
     "completed": true,
-    "completed_date": ""
+    "completed_date": "2021-05-19T22:14:44.857701"
 }
