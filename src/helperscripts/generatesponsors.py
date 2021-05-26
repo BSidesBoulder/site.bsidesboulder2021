@@ -42,11 +42,11 @@ for spon in current_sponsors:
     <br />
 
     <div class="sponsor-website">
-        <strong>Website: </strong> <a href="{spon['web']}">{spon['web']}</a>
+        <strong>Website: </strong> <a href="{spon['web']}" target="_blank">{spon['web']}</a>
     </div>
 
     <div class="sponsor-twitter">
-        <strong>Twitter: </strong> <a href="https://www.twitter.com/{spon['twitter'].replace('@','')}">{spon['twitter']}</a>
+        <strong>Twitter: </strong> <a href="https://www.twitter.com/{spon['twitter'].replace('@','')}" target="_blank">{spon['twitter']}</a>
     </div>
     
 
