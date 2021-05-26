@@ -1,8 +1,11 @@
 {
+    "id":"c8c00fbb-083d-4e3b-bd28-08f5944a3931",
     "name": "Elastic",
     "level": "Supporting",
     "twitter": "@elastic",
     "web": "https://www.elastic.co/",
     "image": "elastic.png",
-    "completed": true
+    "completed": true,
+    "completed_date": "2021-05-25T22:00:00.857701",
+    "note": "We would like to thank elastic for sponsoring this year, in addition to their support last year running a successful CTF."
 }
