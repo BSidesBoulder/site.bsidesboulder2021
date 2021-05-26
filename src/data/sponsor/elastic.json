@@ -1,8 +1,8 @@
 {
-    "name": "Rule4",
-    "level": "Sponsoring",
-    "twitter": "@rule4",
-    "web": "https://www.rule4.com/",
-    "image": "rule4.png",
-    "completed": false
+    "name": "Elastic",
+    "level": "Supporting",
+    "twitter": "@elastic",
+    "web": "https://www.elastic.co/",
+    "image": "elastic.png",
+    "completed": true
 }
