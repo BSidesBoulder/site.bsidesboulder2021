@@ -1,11 +1,1 @@
-{
-    "id": "eef802de-8e47-4522-947d-af4a35982e72",
-    "name": "Secure Code Warrior",
-    "level": "CTF",
-    "twitter": "@seccodewarrior",
-    "web": "https://www.securecodewarrior.com/",
-    "image": "seccodwar.png",
-    "completed": false,
-    "completed_date": "",
-    "note": ""
-}
+{"id": "eef802de-8e47-4522-947d-af4a35982e72","name": "Secure Code Warrior","level": "CTF","twitter": "@seccodewarrior","web": "https://www.securecodewarrior.com/","image": "seccodwar.png","completed": false,"completed_date": "","note": ""}

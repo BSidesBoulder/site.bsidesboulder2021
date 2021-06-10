@@ -1,11 +1,1 @@
-{
-    "id": "e8b95a3b-7657-4ddc-8bc7-f836d9376fc6",
-    "name": "Cisco",
-    "level": "Contributing",
-    "twitter": "@cisco",
-    "web": "https://www.cisco.com/",
-    "image": "cisco.png",
-    "completed": false,
-    "completed_date": "",
-    "note": ""
-}
+{"id": "e8b95a3b-7657-4ddc-8bc7-f836d9376fc6","name": "Cisco","level": "Contributing","twitter": "@cisco","web": "https://www.cisco.com/","image": "cisco.png","completed": false,"completed_date": "","note": ""}

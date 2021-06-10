@@ -56,7 +56,7 @@ if rebuildmailbox.lower() in ['yes','y']:
             data = inputfile.readline()
             mailboxfile['mailbox'].append(json.loads(data))
 
-    mailboxfile['mailbox'].sort(key=lambda x: x['date'], reverse=True)
+    mailboxfile['mailbox'].sort(key=lambda x: x['completed_date'], reverse=True)
     with open(f'themes/bsb2021/static/data/sponsor.json', 'w') as mlbxfile:
         mlbxfile.write(json.dumps(mailboxfile,default=str))
 

@@ -1,11 +1,1 @@
-{
-    "id":"a5ecf232-d1b1-46e1-898b-9be8f1dbe089",
-    "name": "Sans Institute",
-    "level": "Give Away",
-    "twitter": "@sansInstitute",
-    "web": "https://www.sans.org/",
-    "image": "sans.png",
-    "completed": false,
-    "completed_date": "",
-    "note": ""
-}
+{"id":"a5ecf232-d1b1-46e1-898b-9be8f1dbe089","name": "Sans Institute","level": "Custom","twitter": "@sansInstitute","web": "https://www.sans.org/","image": "sans.png","completed": true,"completed_date": "2021-05-25T22:00:00.857701","note": ""}
