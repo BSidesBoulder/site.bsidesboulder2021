@@ -49,16 +49,16 @@ if rebuildmailbox.lower() in ['yes','y']:
         mlbxfile.write(json.dumps(mailboxfile,default=str))
     
     # run through the sponsors
-    mailboxfile['mailbox'] = []
-    sponsorFiles = glob.glob('./data/sponsor/*.json', recursive=True)
-    for file in sponsorFiles:
-        with open(file,'r') as inputfile:
-            data = inputfile.readline()
-            mailboxfile['mailbox'].append(json.loads(data))
+    # mailboxfile['mailbox'] = []
+    # sponsorFiles = glob.glob('./data/sponsor/*.json', recursive=True)
+    # for file in sponsorFiles:
+    #     with open(file,'r') as inputfile:
+    #         data = inputfile.readline()
+    #         mailboxfile['mailbox'].append(json.loads(data))
 
-    mailboxfile['mailbox'].sort(key=lambda x: x['completed_date'], reverse=True)
-    with open(f'themes/bsb2021/static/data/sponsor.json', 'w') as mlbxfile:
-        mlbxfile.write(json.dumps(mailboxfile,default=str))
+    # mailboxfile['mailbox'].sort(key=lambda x: x['completed_date'], reverse=True)
+    # with open(f'themes/bsb2021/static/data/sponsor.json', 'w') as mlbxfile:
+    #     mlbxfile.write(json.dumps(mailboxfile,default=str))
 
     # run through the speakers
     mailboxfile['mailbox'] = []
